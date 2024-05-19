@@ -1,0 +1,172 @@
+<script setup>
+import { ref } from 'vue'
+  import Paginacion from './Paginacion.vue'
+</script>
+<template>
+    <v-app>
+        <Paginacion/>
+        <v-container>
+            <v-card variant="tonal">
+                <v-card-title>
+                    <span class="headline">Detalles de la cuenta</span>
+                </v-card-title>
+                <v-card-text>
+                    <v-col cols="12" sm="8" md="6" lg="4">
+                        <v-text-field 
+                        label="Nombre" 
+                        v-model="nombre"
+                        variant="outlined"
+                        rounded="lg"
+                        density="comfortable"
+                        prepend-inner-icon="mdi mdi-account"
+                        class="custom-field"
+                        ></v-text-field>
+
+                        <v-text-field 
+                        label="Contraseña" 
+                        v-model="contrasena" 
+                        type="password"
+                        prepend-inner-icon="mdi mdi-lock"
+                        variant="outlined"
+                        rounded="lg"
+                        density="comfortable"
+                        class="custom-field"
+                        ></v-text-field>
+
+                        <v-text-field 
+                        label="Correo electrónico"
+                        v-model="correo"
+                        prepend-inner-icon="mdi mdi-at"
+                        variant="outlined"
+                        rounded="lg"
+                        density="comfortable"
+                        class="custom-field"
+                        ></v-text-field>
+                    </v-col>
+                    
+                    
+                </v-card-text>
+                <v-card-actions>
+                    <v-btn 
+                    color="#657F64" 
+                    variant="elevated" 
+                    prepend-icon="mdi-content-save" 
+                    rounded="lg"
+                    density="comfortable"
+                    >Guardar</v-btn>
+                    <v-btn 
+                    color="error" 
+                    variant="elevated" 
+                    prepend-icon="mdi-logout" 
+                    rounded="lg"
+                    density="comfortable"
+                    @click="$router.push('/')"
+                    >Cerrar sesión</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-container>
+        <v-container>
+            <v-card variant="tonal">
+                <v-card-title>
+                    <span class="headline">Mis reservas</span>
+                </v-card-title>
+                <v-card v-for="reserva in reservas" :key="reserva.id" class="mb-4 mx-4" variant="elevated">
+                    
+                    <v-layout row>
+                        <div class="image-container">
+                            <img :src="reserva.imagen">
+                        </div>
+                        <v-layout column justify-space-between>
+                            <div>
+                                <v-card-title>{{reserva.nombre}}</v-card-title>
+                                <v-card-text color="primary">
+                                    <span style="color: #657F64" v-if="reserva.estado === 'activa'">Activa del {{reserva.fechaInicio}} al {{reserva.fechaFin}}</span>
+                                    <span v-else-if="reserva.estado ==='inactiva'">Vencida el {{ reserva.fechaFin }}</span>
+                                    <span v-else style="color: gray">Cancelada</span>
+                                    <div v-if="reserva.estado === 'activa'">
+                                        <v-btn color="error" variant="tonal" class="mt-4">Cancelar</v-btn>
+                                    </div>
+                                </v-card-text> 
+                            </div>
+                        </v-layout>
+                    </v-layout>
+                </v-card>
+            </v-card>
+            
+            
+        </v-container>
+    </v-app>
+
+</template>
+<script>
+  export default {
+  data() {
+    return {
+        nombre: 'Wilberth Kantun Lizama',
+        correo: 'kantunlizama.wilberth@gmail.com',
+        contrasena: '***',
+        reservas: [
+            {
+                nombre: 'Estudio estándar', 
+                fechaInicio: '12 de mayo de 2024', 
+                fechaFin: '13 de mayo de 2024', 
+                costo: 2810, 
+                estado: 'activa',
+                imagen: 'https://5.imimg.com/data5/PC/BL/MY-33192851/hotel-reservation-services-500x500.jpg'
+            },
+            {
+                nombre: 'Individual', 
+                fechaInicio: '20 de abril de 2024', 
+                fechaFin: '22 de abril de 2024', 
+                costo: 2560, 
+                estado: 'inactiva',
+                imagen: 'https://cloudbeds-fcfc.kxcdn.com/wp-content/uploads/2022/05/iStock-1068158510-scaled-e1669046834676.jpg'
+            },
+            {
+                nombre: 'Doble', 
+                fechaInicio: '10 de marzo de 2024', 
+                fechaFin: '12 de marzo de 2024', 
+                costo: 3200, 
+                estado: 'inactiva',
+                imagen: 'https://financesonline.com/uploads/2022/08/hotel-booking.png'
+            },
+            {
+                nombre: 'Suite', 
+                fechaInicio: '15 de febrero de 2024', 
+                fechaFin: '17 de febrero de 2024', 
+                costo: 4500, 
+                estado: 'cancelada',
+                imagen: 'https://lh3.googleusercontent.com/proxy/ojbVTFPjzpB3uBBv_Hcbep8H7AdGe2igOZYl4cwk2xS_zzZvtmB5cSF4JbsKycrwmZ9tgBLPJz6ZaxZLxtsAUppPIYb5Av0DKU0WY9cv9u6C7lya9xv7XDy_ytRhYIUav9Ll_omw33zsPqNNzhc2RuOkS8t-5G2nZOgnmNk'
+            },
+        ],
+        };
+  },
+};
+</script>
+
+<style>
+.image-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: auto;
+    max-height: 100%;
+}
+.s-button {
+    color: #DED9C4;
+    font-size: 24px;
+    font-weight: 700;
+}
+.s-button:hover {
+    color: white;
+}
+.custom-field {
+    color: #657F64;
+}
+</style>
