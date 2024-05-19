@@ -12,6 +12,18 @@ export default createRouter({
       component: () => import('./components/LoginAdmin.vue'),
     },
     {
+      path: '/recuperar',
+      component: () => import('./components/Recuperar.vue'),
+    },
+    {
+      path: '/confirmar_codigo',
+      component: () => import('./components/ConfirmarCodigo.vue'),
+    },
+    {
+      path: '/nueva_contrasena',
+      component: () => import('./components/NuevaContrasena.vue'),
+    },
+    {
       path: '/principal',
       component: () => import('./components/Principal.vue'),
     },
