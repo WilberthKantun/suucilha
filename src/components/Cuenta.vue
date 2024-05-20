@@ -122,14 +122,6 @@
                 estado: 'inactiva',
                 imagen: 'https://financesonline.com/uploads/2022/08/hotel-booking.png'
             },
-            {
-                nombre: 'Suite', 
-                fechaInicio: '15 de febrero de 2024', 
-                fechaFin: '17 de febrero de 2024', 
-                costo: 4500, 
-                estado: 'cancelada',
-                imagen: 'https://lh3.googleusercontent.com/proxy/ojbVTFPjzpB3uBBv_Hcbep8H7AdGe2igOZYl4cwk2xS_zzZvtmB5cSF4JbsKycrwmZ9tgBLPJz6ZaxZLxtsAUppPIYb5Av0DKU0WY9cv9u6C7lya9xv7XDy_ytRhYIUav9Ll_omw33zsPqNNzhc2RuOkS8t-5G2nZOgnmNk'
-            },
         ],
         };
   },
