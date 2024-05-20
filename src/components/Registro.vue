@@ -26,6 +26,15 @@
                         class="custom-field">
                     </v-text-field>
                     <v-text-field
+                        label="Apellido"
+                        v-model="apellido"
+                        variant="outlined"
+                        rounded="lg"
+                        density="comfortable"
+                        prepend-inner-icon="mdi-account"
+                        class="custom-field">
+                    </v-text-field>
+                    <v-text-field
                         label="Fecha de nacimiento"
                         v-model="fecha_nacimiento"
                         variant="outlined"
@@ -70,7 +79,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/')"
+                        @click="registro"
                         >Registrarse</v-btn>
                     </v-card-actions>
                     <h3 class="text-center">
@@ -88,13 +97,39 @@
     </v-app>
 </template>
 <script>
+import axios from 'axios';
+import router from '@/router';
 export default {
+    
     data() {
         return {
             email: '',
-            password: ''
+            password: '',
+            nombre:'',
+            fecha_nacimiento:'',
+            repassword:''
         }
     },
+    methods: {
+    registro() {
+      axios.post('http://localhost:51491/suucilha/auth/register', {
+        nombre: this.nombre,
+        apellido: this.apellido,
+        fechaNacimiento: this.fecha_nacimiento,
+        username: this.email,
+        password: this.password,
+      })
+      .then(response => {
+        this.token = response.data.token;
+        router.push('/')
+        console.log(this.token);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+
+      });
+    }
+  }
 }
 </script>
 

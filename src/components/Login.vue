@@ -42,7 +42,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/principal')"
+                        @click="login"
                         >Iniciar sesión</v-btn>
                     </v-card-actions>
                     <h3 class="text-center">
@@ -74,14 +74,36 @@
     </v-app>
 </template>
 <script>
+import axios from 'axios';
+import router from '@/router';
+
 export default {
-    data() {
-        return {
-            email: '',
-            password: ''
-        }
-    },
-}
+  data() {
+    return {
+      email: '',
+      password: '',
+      token: ''
+    };
+  },
+  methods: {
+    login() {
+      axios.post('http://localhost:51491/suucilha/auth/login', {
+        username: this.email,
+        password: this.password
+      })
+      .then(response => {
+        this.token = response.data.token;
+        localStorage.setItem('token', this.token);
+        router.push('/principal')
+        console.log(this.token);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
