@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
   import Paginacion from './Paginacion.vue'
 </script>
 <template>
@@ -21,7 +20,6 @@ import { ref } from 'vue'
                         prepend-inner-icon="mdi mdi-account"
                         class="custom-field"
                         ></v-text-field>
-
                         <v-text-field 
                         label="Contraseña" 
                         v-model="contrasena" 
@@ -32,7 +30,6 @@ import { ref } from 'vue'
                         density="comfortable"
                         class="custom-field"
                         ></v-text-field>
-
                         <v-text-field 
                         label="Correo electrónico"
                         v-model="correo"
@@ -43,8 +40,6 @@ import { ref } from 'vue'
                         class="custom-field"
                         ></v-text-field>
                     </v-col>
-                    
-                    
                 </v-card-text>
                 <v-card-actions>
                     <v-btn 
@@ -71,7 +66,6 @@ import { ref } from 'vue'
                     <span class="headline">Mis reservas</span>
                 </v-card-title>
                 <v-card v-for="reserva in reservas" :key="reserva.id" class="mb-4 mx-4" variant="elevated">
-                    
                     <v-layout row>
                         <div class="image-container">
                             <img :src="reserva.imagen">
@@ -92,8 +86,6 @@ import { ref } from 'vue'
                     </v-layout>
                 </v-card>
             </v-card>
-            
-            
         </v-container>
     </v-app>
 
@@ -144,7 +136,7 @@ import { ref } from 'vue'
 };
 </script>
 
-<style>
+<style scoped>
 .image-container {
     width: 300px;
     height: 200px;
@@ -153,20 +145,8 @@ import { ref } from 'vue'
     align-items: center;
     justify-content: center;
 }
-
 .image-container img {
     max-width: auto;
     max-height: 100%;
-}
-.s-button {
-    color: #DED9C4;
-    font-size: 24px;
-    font-weight: 700;
-}
-.s-button:hover {
-    color: white;
-}
-.custom-field {
-    color: #657F64;
 }
 </style>

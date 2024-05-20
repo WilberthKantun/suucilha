@@ -24,6 +24,10 @@ export default createRouter({
       component: () => import('./components/NuevaContrasena.vue'),
     },
     {
+      path: '/reservar',
+      component: () => import('./components/Reservar.vue'),
+    },
+    {
       path: '/principal',
       component: () => import('./components/Principal.vue'),
     },
