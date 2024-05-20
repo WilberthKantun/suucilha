@@ -6,6 +6,38 @@
                 <v-card-title>
                     <span class="headline">Habitaciones</span>
                 </v-card-title>
+                <v-card-subtitle>
+                    <v-row>
+                        <v-col>
+                            <v-date-input label="Fecha"></v-date-input>
+                        </v-col>
+                        <v-col>
+                            <v-text-field
+                            type="number"
+                            max="4"
+                            min="1"
+                            v-model="personasBuscador"
+                            prepend-inner-icon="mdi-account"
+                            label="Personas"
+                            ></v-text-field>
+                        </v-col><v-col>
+                            <v-text-field
+                            type="number"
+                            prepend-inner-icon="mdi-"
+                            v-model="precioMin"
+                            label="Desde"
+                            ></v-text-field>
+                        </v-col>
+                        <v-col>
+                            <v-text-field
+                            type="number"
+                            prepend-inner-icon="mdi-calendar"
+                            v-model="precioMax"
+                            label="Hasta"
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                </v-card-subtitle>
                 <v-card v-for="habitacion in habitaciones" :key="habitacion.id" class="mb-4 mx-4" variant="elevated">
                     <v-layout row>
                         <div class="image-container">
@@ -127,6 +159,11 @@
   export default {
   data() {
     return {
+        menu: false,
+        fecha: '',
+        personasBuscador: 1, 
+        precioMin: 1,
+        precioMax: 9999,
         verMasDialog: false,
         nombre: '',
         descripcion: '',
