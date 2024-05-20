@@ -26,6 +26,15 @@
                         class="custom-field">
                     </v-text-field>
                     <v-text-field
+                        label="Apellido"
+                        v-model="apellido"
+                        variant="outlined"
+                        rounded="lg"
+                        density="comfortable"
+                        prepend-inner-icon="mdi-account"
+                        class="custom-field">
+                    </v-text-field>
+                    <v-text-field
                         label="Fecha de nacimiento"
                         v-model="fecha_nacimiento"
                         variant="outlined"
@@ -92,7 +101,12 @@ export default {
     data() {
         return {
             email: '',
-            password: ''
+            password: '',
+            repassword: '',
+            nombre: '',
+            fecha_nacimiento: '',
+            apellido: '',
+
         }
     },
 }
