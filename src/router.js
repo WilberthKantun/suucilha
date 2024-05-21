@@ -12,6 +12,10 @@ export default createRouter({
       component: () => import('./components/LoginAdmin.vue'),
     },
     {
+      path: '/reservas',
+      component: () => import('./components/Reservas.vue'),
+    },
+    {
       path: '/recuperar',
       component: () => import('./components/Recuperar.vue'),
     },
@@ -26,6 +30,9 @@ export default createRouter({
     {
       path: '/reservar',
       component: () => import('./components/Reservar.vue'),
+    },{
+      path: '/habitaciones',
+      component: () => import('./components/Habitaciones.vue'),
     },
     {
       path: '/principal',

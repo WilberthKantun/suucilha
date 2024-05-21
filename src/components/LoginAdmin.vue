@@ -42,7 +42,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/principal')"
+                        @click="$router.push('/reservas')"
                         >Iniciar sesión</v-btn>
                     </v-card-actions>
                 <v-row style="justify-content: end;" class="mt-4">
@@ -72,17 +72,14 @@ export default {
 </script>
 
 <style scoped>
-.custom-field {
-    color: #657F64;
-}
 .contenedor {
     display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #657f64;
-  flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #657f64;
+    flex-direction: column;
 }
 
 h1,h2 {
