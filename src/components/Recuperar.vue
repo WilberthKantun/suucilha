@@ -44,7 +44,7 @@
                         variant="elevated"
                         rounded="lg"
                         icon="mdi-arrow-left"
-                        @click="$router.push('/')"
+                        @click="$router.push('/login')"
                         ></v-btn>
                     </v-row>
         </v-card-text>
