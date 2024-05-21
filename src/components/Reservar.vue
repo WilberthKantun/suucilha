@@ -8,10 +8,23 @@
                 </v-card-title>
                 <v-card-subtitle>
                     <v-row>
-                        <v-col>
-                            <v-date-input label="Fecha"></v-date-input>
+                        <v-col cols="2" sm="6" md="3" lg="2">
+                            <v-date-input
+                            label="Fecha inicio"
+                            prepend-inner-icon="mdi-calendar" 
+                            prepend-icon=""
+                            v-model="fechaInicio"
+                            ></v-date-input>
                         </v-col>
-                        <v-col>
+                        <v-col cols="2" sm="6" md="3" lg="2">
+                            <v-date-input
+                            label="Fecha fin"
+                            prepend-inner-icon="mdi-calendar" 
+                            prepend-icon=""
+                            v-model="fechaFin"
+                            ></v-date-input>
+                        </v-col>
+                        <v-col cols="2" sm="6" md="3" lg="2">
                             <v-text-field
                             type="number"
                             max="4"
@@ -20,7 +33,8 @@
                             prepend-inner-icon="mdi-account"
                             label="Personas"
                             ></v-text-field>
-                        </v-col><v-col>
+                        </v-col>
+                        <v-col cols="2" sm="6" md="3" lg="2">
                             <v-text-field
                             type="number"
                             prepend-inner-icon="mdi-"
@@ -28,13 +42,20 @@
                             label="Desde"
                             ></v-text-field>
                         </v-col>
-                        <v-col>
+                        <v-col cols="2" sm="6" md="3" lg="2">
                             <v-text-field
                             type="number"
                             prepend-inner-icon="mdi-calendar"
                             v-model="precioMax"
                             label="Hasta"
                             ></v-text-field>
+                        </v-col>
+                        <v-col cols="2" sm="6" md="3" lg="2">
+                            <v-btn
+                                color="#657F64" 
+                                rounded="lg"
+                                >Buscar
+                            </v-btn>
                         </v-col>
                     </v-row>
                 </v-card-subtitle>
@@ -160,7 +181,8 @@
   data() {
     return {
         menu: false,
-        fecha: '',
+        fechaInicio: null,
+        fechaFin: null,
         personasBuscador: 1, 
         precioMin: 1,
         precioMax: 9999,
@@ -224,7 +246,7 @@
         this.imagen = this.imagen1;
         this.personas = habitacion.personas;
         this.caracteristicas = habitacion.caracteristicas;
-        console.log(habitacion);
+        console.log(this.fecha);
         this.verMasDialog = true;
     },
 },

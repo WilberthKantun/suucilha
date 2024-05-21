@@ -21,16 +21,16 @@
                         class="custom-field"
                         ></v-text-field>
                         <v-text-field 
-                        label="Contraseña" 
-                        v-model="contrasena" 
-                        type="password"
-                        prepend-inner-icon="mdi mdi-lock"
+                        label="Apellido" 
+                        v-model="apellido"
                         variant="outlined"
                         rounded="lg"
                         density="comfortable"
+                        prepend-inner-icon="mdi mdi-account"
                         class="custom-field"
                         ></v-text-field>
-                        <v-text-field 
+                        <v-text-field
+                        disabled
                         label="Correo electrónico"
                         v-model="correo"
                         prepend-inner-icon="mdi mdi-at"
@@ -39,9 +39,49 @@
                         density="comfortable"
                         class="custom-field"
                         ></v-text-field>
+                        <div v-if="cambiarContra==true">
+                            <v-text-field
+                            label="Contraseña actual" 
+                            v-model="contrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                            <v-text-field
+                            label="Nueva contraseña" 
+                            v-model="nuevaContrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                            <v-text-field
+                            label="Repite la nueva contraseña" 
+                            v-model="rNuevaContrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                        </div>
                     </v-col>
                 </v-card-text>
                 <v-card-actions>
+                    <v-btn 
+                    color="white" 
+                    variant="elevated" 
+                    prepend-icon="mdi-lock" 
+                    rounded="lg"
+                    density="comfortable"
+                    @click="cambiarContra=!cambiarContra"
+                    >Cambiar contraseña</v-btn>
                     <v-btn 
                     color="#657F64" 
                     variant="elevated" 
@@ -94,9 +134,13 @@
   export default {
   data() {
     return {
-        nombre: 'Wilberth Kantun Lizama',
+        nombre: 'Wilberth',
+        apellido: 'Kantun',
         correo: 'kantunlizama.wilberth@gmail.com',
         contrasena: '***',
+        nuevaContrasena: '',
+        rNuevaContrasena: '',
+        cambiarContra: false,
         reservas: [
             {
                 nombre: 'Estudio estándar', 

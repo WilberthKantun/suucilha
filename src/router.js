@@ -32,6 +32,14 @@ export default createRouter({
       component: () => import('./components/Principal.vue'),
     },
     {
+      path: '/acerca',
+      component: () => import('./components/Acerca.vue'),
+    },
+    {
+      path: '/galeria',
+      component: () => import('./components/Galeria.vue'),
+    },
+    {
       path: '/cuenta',
       component: () => import('./components/Cuenta.vue'),
     },
