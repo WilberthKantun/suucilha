@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <Paginacion/>
+        <Paginacion :logged="$globalState.logged"/>
         <v-container>
             <v-card variant="tonal">
                 <v-card-title>
@@ -37,7 +37,7 @@
                         <v-col cols="2" sm="6" md="3" lg="2">
                             <v-text-field
                             type="number"
-                            prepend-inner-icon="mdi-"
+                            prefix="MXN$"
                             v-model="precioMin"
                             label="Desde"
                             ></v-text-field>
@@ -45,7 +45,7 @@
                         <v-col cols="2" sm="6" md="3" lg="2">
                             <v-text-field
                             type="number"
-                            prepend-inner-icon="mdi-calendar"
+                            prefix="MXN$"
                             v-model="precioMax"
                             label="Hasta"
                             ></v-text-field>

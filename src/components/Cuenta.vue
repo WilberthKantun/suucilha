@@ -3,7 +3,7 @@
 </script>
 <template>
     <v-app>
-        <Paginacion/>
+        <Paginacion :logged="$globalState.logged"/>
         <v-container>
             <v-card variant="tonal">
                 <v-card-title>
@@ -95,7 +95,7 @@
                     prepend-icon="mdi-logout" 
                     rounded="lg"
                     density="comfortable"
-                    @click="$router.push('/')"
+                    @click="logout"
                     >Cerrar sesión</v-btn>
                 </v-card-actions>
             </v-card>
@@ -169,9 +169,14 @@
         ],
         };
   },
+  methods: {
+    logout(){
+        this.$globalState.logged=false;
+        this.$router.push('/');
+    }
+  }
 };
 </script>
-
 <style scoped>
 .image-container {
     width: 300px;

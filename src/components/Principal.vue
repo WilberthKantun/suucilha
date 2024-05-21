@@ -1,6 +1,6 @@
 <template>
   <v-app class="inicio">
-      <paginacion/>
+      <Paginacion :logged="$globalState.logged"/>
     </v-app>
 </template>
 <style scoped>
@@ -11,6 +11,15 @@
 }
 
 </style>
+<script>
+import Paginacion from './Paginacion.vue'
+
+export default {
+  components: {
+    Paginacion
+  }
+}
+</script>
 
 
 

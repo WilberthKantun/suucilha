@@ -80,14 +80,14 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/')"
+                        @click="$router.push('/login')"
                         >Registrarse</v-btn>
                     </v-card-actions>
                     <h3 class="text-center">
                     ¿Ya tienes una cuenta?
                 </h3>
                 <h3 class="text-center">
-                    <router-link to="/">
+                    <router-link to="/login">
                         Inicia sesión
                     </router-link>
                 </h3>

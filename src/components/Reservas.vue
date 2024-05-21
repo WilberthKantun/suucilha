@@ -67,11 +67,10 @@
                 }
             }
         ],
-        };
+    };
   },
 };
 </script>
-
 <style scoped>
 .image-container {
     width: 300px;

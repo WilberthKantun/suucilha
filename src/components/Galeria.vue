@@ -1,6 +1,6 @@
 <template>
   <v-app class="inicio">
-      <paginacion/>
+    <Paginacion :logged="$globalState.logged"/>
           <v-container class="contenedor">
             <v-row>
               <v-col cols="4" v-for="imagen in imagenes">

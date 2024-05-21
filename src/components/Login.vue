@@ -42,7 +42,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/principal')"
+                        @click="login"
                         >Iniciar sesión</v-btn>
                     </v-card-actions>
                     <h3 class="text-center">
@@ -58,7 +58,14 @@
                             Recuperar contraseña
                         </router-link>
                     </h3>
-                    <v-row style="justify-content: end;">
+                    <v-row style="justify-content: space-between;">
+                        <v-btn
+                        color="#657F64"
+                        variant="elevated"
+                        rounded="lg"
+                        icon="mdi-arrow-left"
+                        @click="$router.push('/')"
+                        ></v-btn>
                         <v-btn
                         color="#657F64"
                         variant="elevated"
@@ -81,6 +88,12 @@ export default {
             password: ''
         }
     },
+    methods: {
+        login(){
+            this.$globalState.logged = true;
+            this.$router.push('/');
+        }
+    }
 }
 </script>
 

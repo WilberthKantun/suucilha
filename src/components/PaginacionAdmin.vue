@@ -6,7 +6,7 @@
             <v-tool-bar-items>
                 <v-btn text to="/reservas" class="s-button">Reservas</v-btn>
                 <v-btn text to="/habitaciones" class="s-button">Habitaciones</v-btn>
-                <v-btn icon to="/"><v-icon>mdi-logout</v-icon></v-btn>
+                <v-btn @click="logoutAdmin"><v-icon>mdi-logout</v-icon></v-btn>
             </v-tool-bar-items>
         </v-row>
     </v-toolbar>
@@ -24,11 +24,9 @@
 <script>
 export default {
   methods: {
-    scrollTo(section) {
-      const element = document.getElementById(section);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    logoutAdmin(){
+      this.$globalState.logged = false;
+      this.$router.push('/');
     }
   }
 }

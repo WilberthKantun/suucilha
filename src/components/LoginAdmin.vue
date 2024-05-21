@@ -51,7 +51,7 @@
                     variant="elevated"
                     rounded="lg"
                     icon="mdi-account"
-                    @click="$router.push('/')"
+                    @click="$router.push('/login')"
                     ></v-btn>
                 </v-row>
         </v-card-text>
@@ -68,6 +68,13 @@ export default {
             password: ''
         }
     },
+    methods: {
+        login_admin(){
+            this.$globalState.admin = true;
+            this.$router.push('/reservas');
+
+        }
+    }
 }
 </script>
 
