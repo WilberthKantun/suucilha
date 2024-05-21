@@ -1,11 +1,16 @@
 <template>
-  <v-app>
+  <v-app class="inicio">
       <paginacion/>
-        <v-img
-        src="@/assets/Principal.png"
-      />
     </v-app>
 </template>
-<script setup>
-  import Paginacion from './Paginacion.vue'
-</script>
+<style scoped>
+.inicio{
+  height: 100vh;
+  background: url(@/assets/Principal.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+</style>
+
+
+

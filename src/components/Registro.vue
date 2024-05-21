@@ -105,9 +105,10 @@ export default {
         return {
             email: '',
             password: '',
-            nombre:'',
-            fecha_nacimiento:'',
-            repassword:''
+            repassword: '',
+            nombre: '',
+            fecha_nacimiento: '',
+            apellido: '',
         }
     },
     methods: {

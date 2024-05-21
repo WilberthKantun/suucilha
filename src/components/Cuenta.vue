@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
   import Paginacion from './Paginacion.vue'
 </script>
 <template>
@@ -21,19 +20,17 @@ import { ref } from 'vue'
                         prepend-inner-icon="mdi mdi-account"
                         class="custom-field"
                         ></v-text-field>
-
                         <v-text-field 
-                        label="Contraseña" 
-                        v-model="contrasena" 
-                        type="password"
-                        prepend-inner-icon="mdi mdi-lock"
+                        label="Apellido" 
+                        v-model="apellido"
                         variant="outlined"
                         rounded="lg"
                         density="comfortable"
+                        prepend-inner-icon="mdi mdi-account"
                         class="custom-field"
                         ></v-text-field>
-
-                        <v-text-field 
+                        <v-text-field
+                        disabled
                         label="Correo electrónico"
                         v-model="correo"
                         prepend-inner-icon="mdi mdi-at"
@@ -42,11 +39,49 @@ import { ref } from 'vue'
                         density="comfortable"
                         class="custom-field"
                         ></v-text-field>
+                        <div v-if="cambiarContra==true">
+                            <v-text-field
+                            label="Contraseña actual" 
+                            v-model="contrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                            <v-text-field
+                            label="Nueva contraseña" 
+                            v-model="nuevaContrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                            <v-text-field
+                            label="Repite la nueva contraseña" 
+                            v-model="rNuevaContrasena" 
+                            type="password"
+                            prepend-inner-icon="mdi mdi-lock"
+                            variant="outlined"
+                            rounded="lg"
+                            density="comfortable"
+                            class="custom-field"
+                            ></v-text-field>
+                        </div>
                     </v-col>
-                    
-                    
                 </v-card-text>
                 <v-card-actions>
+                    <v-btn 
+                    color="white" 
+                    variant="elevated" 
+                    prepend-icon="mdi-lock" 
+                    rounded="lg"
+                    density="comfortable"
+                    @click="cambiarContra=!cambiarContra"
+                    >Cambiar contraseña</v-btn>
                     <v-btn 
                     color="#657F64" 
                     variant="elevated" 
@@ -71,7 +106,6 @@ import { ref } from 'vue'
                     <span class="headline">Mis reservas</span>
                 </v-card-title>
                 <v-card v-for="reserva in reservas" :key="reserva.id" class="mb-4 mx-4" variant="elevated">
-                    
                     <v-layout row>
                         <div class="image-container">
                             <img :src="reserva.imagen">
@@ -92,8 +126,6 @@ import { ref } from 'vue'
                     </v-layout>
                 </v-card>
             </v-card>
-            
-            
         </v-container>
     </v-app>
 
@@ -102,9 +134,13 @@ import { ref } from 'vue'
   export default {
   data() {
     return {
-        nombre: 'Wilberth Kantun Lizama',
+        nombre: 'Wilberth',
+        apellido: 'Kantun',
         correo: 'kantunlizama.wilberth@gmail.com',
         contrasena: '***',
+        nuevaContrasena: '',
+        rNuevaContrasena: '',
+        cambiarContra: false,
         reservas: [
             {
                 nombre: 'Estudio estándar', 
@@ -130,21 +166,13 @@ import { ref } from 'vue'
                 estado: 'inactiva',
                 imagen: 'https://financesonline.com/uploads/2022/08/hotel-booking.png'
             },
-            {
-                nombre: 'Suite', 
-                fechaInicio: '15 de febrero de 2024', 
-                fechaFin: '17 de febrero de 2024', 
-                costo: 4500, 
-                estado: 'cancelada',
-                imagen: 'https://lh3.googleusercontent.com/proxy/ojbVTFPjzpB3uBBv_Hcbep8H7AdGe2igOZYl4cwk2xS_zzZvtmB5cSF4JbsKycrwmZ9tgBLPJz6ZaxZLxtsAUppPIYb5Av0DKU0WY9cv9u6C7lya9xv7XDy_ytRhYIUav9Ll_omw33zsPqNNzhc2RuOkS8t-5G2nZOgnmNk'
-            },
         ],
         };
   },
 };
 </script>
 
-<style>
+<style scoped>
 .image-container {
     width: 300px;
     height: 200px;
@@ -153,20 +181,8 @@ import { ref } from 'vue'
     align-items: center;
     justify-content: center;
 }
-
 .image-container img {
     max-width: auto;
     max-height: 100%;
-}
-.s-button {
-    color: #DED9C4;
-    font-size: 24px;
-    font-weight: 700;
-}
-.s-button:hover {
-    color: white;
-}
-.custom-field {
-    color: #657F64;
 }
 </style>
