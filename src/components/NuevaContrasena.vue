@@ -42,7 +42,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/')"
+                        @click="$router.push('/login')"
                         >Aceptar</v-btn>
                     </v-card-actions>
                     <v-row style="justify-content: end;" class="mt-4">
@@ -72,9 +72,6 @@ export default {
 </script>
 
 <style scoped>
-.custom-field {
-    color: #657F64;
-}
 .contenedor {
     display: flex;
   width: 100vw;

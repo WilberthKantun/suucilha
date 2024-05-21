@@ -42,7 +42,7 @@
                         color="#657F64" 
                         variant="elevated"
                         rounded="lg"
-                        @click="$router.push('/principal')"
+                        @click="$router.push('/reservas')"
                         >Iniciar sesión</v-btn>
                     </v-card-actions>
                 <v-row style="justify-content: end;" class="mt-4">
@@ -51,7 +51,7 @@
                     variant="elevated"
                     rounded="lg"
                     icon="mdi-account"
-                    @click="$router.push('/')"
+                    @click="$router.push('/login')"
                     ></v-btn>
                 </v-row>
         </v-card-text>
@@ -68,21 +68,25 @@ export default {
             password: ''
         }
     },
+    methods: {
+        login_admin(){
+            this.$globalState.admin = true;
+            this.$router.push('/reservas');
+
+        }
+    }
 }
 </script>
 
 <style scoped>
-.custom-field {
-    color: #657F64;
-}
 .contenedor {
     display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #657f64;
-  flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #657f64;
+    flex-direction: column;
 }
 
 h1,h2 {

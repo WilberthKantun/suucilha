@@ -1,6 +1,6 @@
 <template>
   <v-app class="inicio">
-      <paginacion/>
+    <Paginacion :logged="$globalState.logged"/>
           <v-container class="contenedor">
               <div class="ma-16">
                 <h1>Tu refugio en el Corazón de Valladolid, Yucatán</h1>
@@ -17,6 +17,7 @@
             </v-container>
     </v-app>
 </template>
+<script></script>
 <style scoped>
 .inicio{
   height: 100vh;

@@ -16,6 +16,12 @@ import { createApp } from 'vue'
 
 const app = createApp(App)
 
+app.config.globalProperties.
+$globalState = {
+    logged: false,
+    admin: false
+};
+
 registerPlugins(app)
 
 app.use(router)

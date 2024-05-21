@@ -5,11 +5,16 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('./components/Login.vue'),
+      name: 'principal',
+      component: () => import('./components/Principal.vue'),
     },
     {
       path: '/login_admin',
       component: () => import('./components/LoginAdmin.vue'),
+    },
+    {
+      path: '/reservas',
+      component: () => import('./components/Reservas.vue'),
     },
     {
       path: '/recuperar',
@@ -26,10 +31,13 @@ export default createRouter({
     {
       path: '/reservar',
       component: () => import('./components/Reservar.vue'),
+    },{
+      path: '/habitaciones',
+      component: () => import('./components/Habitaciones.vue'),
     },
     {
-      path: '/principal',
-      component: () => import('./components/Principal.vue'),
+      path: '/login',
+      component: () => import('./components/Login.vue'),
     },
     {
       path: '/acerca',

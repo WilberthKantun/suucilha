@@ -34,15 +34,16 @@
                         prepend-inner-icon="mdi-account"
                         class="custom-field">
                     </v-text-field>
-                    <v-text-field
-                        label="Fecha de nacimiento"
+                    <v-date-input
+                        label="Fecha fin"
                         v-model="fecha_nacimiento"
+                        prepend-inner-icon="mdi-calendar" 
                         variant="outlined"
-                        rounded="lg"
                         density="comfortable"
-                        prepend-inner-icon="mdi-calendar"
-                        class="custom-field"
-                    ></v-text-field>
+                        rounded="lg"
+                        style="color: #657F64;"
+                        prepend-icon=""
+                        ></v-date-input>
                     <v-text-field
                         label="Correo"
                         v-model="email"
@@ -86,7 +87,7 @@
                     ¿Ya tienes una cuenta?
                 </h3>
                 <h3 class="text-center">
-                    <router-link to="/">
+                    <router-link to="/login">
                         Inicia sesión
                     </router-link>
                 </h3>
@@ -107,7 +108,7 @@ export default {
             password: '',
             repassword: '',
             nombre: '',
-            fecha_nacimiento: '',
+            fecha_nacimiento: null,
             apellido: '',
         }
     },
@@ -135,9 +136,6 @@ export default {
 </script>
 
 <style scoped>
-.custom-field {
-    color: #657F64;
-}
 .contenedor {
     display: flex;
   width: 100vw;

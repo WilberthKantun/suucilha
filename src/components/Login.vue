@@ -58,7 +58,14 @@
                             Recuperar contraseña
                         </router-link>
                     </h3>
-                    <v-row style="justify-content: end;">
+                    <v-row style="justify-content: space-between;">
+                        <v-btn
+                        color="#657F64"
+                        variant="elevated"
+                        rounded="lg"
+                        icon="mdi-arrow-left"
+                        @click="$router.push('/')"
+                        ></v-btn>
                         <v-btn
                         color="#657F64"
                         variant="elevated"
@@ -94,7 +101,8 @@ export default {
       .then(response => {
         this.token = response.data.token;
         localStorage.setItem('token', this.token);
-        router.push('/principal')
+        this.$globalState.logged = true;
+            this.$router.push('/');
         console.log(this.token);
       })
       .catch(error => {
@@ -104,12 +112,10 @@ export default {
     }
   }
 };
+
 </script>
 
 <style scoped>
-.custom-field {
-    color: #657F64;
-}
 .contenedor {
     display: flex;
   width: 100vw;
