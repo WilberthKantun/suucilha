@@ -64,6 +64,6 @@ Además de los aspectos técnicos, este proyecto nos ha dejado importantes lecci
 - 📄[Diagrama de casos de uso](https://github.com/WilberthKantun/suucilha/assets/91703671/98d27afc-60ef-4d72-a179-c17287ad3d73)
 - 📄[Diagrama de arquitectura del sistema](https://github.com/WilberthKantun/suucilha/assets/91703671/ccd5241b-74fb-4406-8454-2667ccf69c60)
 - [Vistas del proyecto](https://www.figma.com/file/s0qiAiUykWXrqAIbV1AL9c/Untitled?type=design&node-id=0%3A1&mode=design&t=l4ZJP74EuBgggAQE-1)
-- [Funcionamiento]()
+- [Funcionamiento](https://github.com/WilberthKantun/suucilha/funcionamiento)
 - [Backend](https://github.com/WilderTurriza/Suucilha-backend)
 - [Frontend](https://github.com/WilberthKantun/suucilha)
