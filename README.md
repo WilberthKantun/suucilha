@@ -59,11 +59,11 @@ La realización de este proyecto nos ha permitido concluir que la utilización d
 Spring Boot, en particular, ha sido una herramienta valiosa para el desarrollo del backend. Nos ha facilitado enormemente la comunicación con la base de datos y la creación de APIs, mejorando la eficiencia y la claridad en el manejo de las operaciones del servidor. Por otro lado, Vue.js nos ha permitido desarrollar interfaces de usuario más atractivas y funcionales, lo que ha contribuido a ofrecer una mejor experiencia a los usuarios.
 Además de los aspectos técnicos, este proyecto nos ha dejado importantes lecciones sobre la gestión del tiempo. La aparición de problemas imprevistos y la falta de personal adecuado resaltaron la necesidad de planificar mejor y ser más realistas en la estimación de recursos y plazos. A pesar de tener un proyecto bien definido, la falta de experiencia en tecnologías y recursos humanos adecuados complicó su ejecución. En resumen, este proyecto ha sido una valiosa experiencia de aprendizaje tanto en el ámbito técnico como en la gestión de proyectos.
 
-## Funcionamiento
+## Enlaces
 
 - 📄[Diagrama de casos de uso](https://github.com/WilberthKantun/suucilha/assets/91703671/98d27afc-60ef-4d72-a179-c17287ad3d73)
 - 📄[Diagrama de arquitectura del sistema](https://github.com/WilberthKantun/suucilha/assets/91703671/ccd5241b-74fb-4406-8454-2667ccf69c60)
-- [Vistas del proyecto](https://www.figma.com/file/s0qiAiUykWXrqAIbV1AL9c/Untitled?type=design&node-id=0%3A1&mode=design&t=l4ZJP74EuBgggAQE-1)
-- [Funcionamiento](https://github.com/WilberthKantun/suucilha/funcionamiento)
-- [Backend](https://github.com/WilderTurriza/Suucilha-backend)
-- [Frontend](https://github.com/WilberthKantun/suucilha)
+- 👁️[Vistas del proyecto](https://www.figma.com/file/s0qiAiUykWXrqAIbV1AL9c/Untitled?type=design&node-id=0%3A1&mode=design&t=l4ZJP74EuBgggAQE-1)
+- ⚙️[Funcionamiento](https://github.com/WilberthKantun/suucilha/tree/main/funcionamiento)
+- 🗄️[Backend](https://github.com/WilderTurriza/Suucilha-backend)
+- 🖥️[Frontend](https://github.com/WilberthKantun/suucilha)
