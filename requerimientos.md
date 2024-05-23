@@ -1,5 +1,5 @@
-Requisitos funcionales
-# Sistema
+# Requisitos funcionales
+## Sistema
 - RF-001. Permitir acceder como administrador
   - El sistema debe permitir el ingreso del administrador, ofreciendo funcionalidades para la gestión del establecimiento en general (Descritas con más detalles en las funcionalidades RF-013, RF-014 y RF-015), así como para la gestión y administración de reservaciones de habitaciones.
 - RF-002. Crear cuenta
@@ -24,7 +24,7 @@ Requisitos funcionales
   - El usuario podrá visualizar todas las reservaciones que ha hecho anteriormente con su cuenta. 
 - RF-012. Cancelar reservación
   - El usuario podrá cancelar la reservación 48 horas antes de su fecha de llegada prevista.
-# Administrador
+## Administrador
 - RF-013. Visualizar reservaciones
   - El administrador podrá visualizar todas las reservaciones hechas por fechas. 
 - RF-014. Gestionar habitaciones
