@@ -1,7 +1,7 @@
 # Suucilha
 
 ## Colaboradores
-- Wilberth Jesús Kantún Lizama []
+- Wilberth Jesús Kantún Lizama
   - [GitHub](https://github.com/WilberthKantun) 
   - [LinkedIn](https://www.linkedin.com/in/wilberth-kant%C3%BAn-7a4470240/) 
 - Wilder Manuel Turriza Poot 
@@ -65,8 +65,5 @@ Además de los aspectos técnicos, este proyecto nos ha dejado importantes lecci
 - 📄[Diagrama de arquitectura del sistema](https://github.com/WilberthKantun/suucilha/assets/91703671/ccd5241b-74fb-4406-8454-2667ccf69c60)
 - [Vistas del proyecto](https://www.figma.com/file/s0qiAiUykWXrqAIbV1AL9c/Untitled?type=design&node-id=0%3A1&mode=design&t=l4ZJP74EuBgggAQE-1)
 - [Funcionamiento]()
-- ![funcionamiento2](https://github.com/WilberthKantun/suucilha/assets/91703671/89f4f03a-6ddf-4780-a149-3a897f2fc217)
-- ![funcionamiento1](https://github.com/WilberthKantun/suucilha/assets/91703671/8824c678-d13f-4c58-b4a6-ea0a55dc9e4d)
-
 - [Backend](https://github.com/WilderTurriza/Suucilha-backend)
 - [Frontend](https://github.com/WilberthKantun/suucilha)
